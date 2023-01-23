@@ -1,0 +1,94 @@
+:root{
+    --bg-color: #f3ffcf;
+    --star-color: #ffc456;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #ccc;
+    background-image: url(../img/Gacha_Dehya.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.icon-sz{
+    width: 65px;
+    height: 65px;
+    box-shadow: 2px 2px 10px gray;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.card{
+    background-color: white;
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 15px #f04842;
+    overflow: hidden;
+    transition: all 0.4s;
+    cursor: pointer;
+    &__header{
+        width: 100%;
+        display: block;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--star-color);
+        &__contentimg{
+            border: 5px solid #d99740;
+            border-radius: 50%;
+            background-color: #f6eee0;
+            box-shadow: 0px -10px 20px #a87737;
+            position: relative;
+            overflow: hidden;
+            margin-top: -12rem;
+            &-img{
+                width: 180px;
+            }
+        }
+        &-title{
+            font-size: 3rem;
+            span{
+                color: var(--star-color);
+            }
+        }
+        &-text{
+            font-size: 1.6rem;
+            font-style: italic;
+        }
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0;
+        &-talent{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}
+
+.card:hover{
+    opacity: 0.2;
+}
